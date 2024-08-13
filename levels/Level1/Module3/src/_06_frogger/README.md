@@ -49,7 +49,7 @@ void display(PApplet applet)
 ```
 10. Declare several `Car` member variables inside your `Frogger` class and initialize them in the setup method.
 11. From your `draw` method, call each Car's `display` method like `car.display(this)`. You should see your cars appear.
-    (note: passing the PApplet to the Car like this is an example of "inversion of control". That is, since a `Car` knows how to be a car, `Frogger` lets the `Car` be in charge of drawing the car). # maybe this is just delegation?
+    (note: passing the PApplet to the Car like this is an example of using "delegation" to improve "separation of concerns". That just means that since a `Car` knows how to be a car, `Frogger.draw` asks `Car.display` to draw the car).
 12. Inside your Car class write a method for the car to move to the left with its speed.
 13. Inside your Car class write a method for the car to move to the left with its speed. In the same method, if the car goes off the canvas, have it return to the rightmost position of your canvas.  (hint: use Processing's width variable)
 14.  Write another method for the car to move to the right with its speed. In the same method,  if the car goes off the canvas, have it return to the leftmost position of your canvas
