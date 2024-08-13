@@ -2,13 +2,13 @@
 
 # Frogger
 
-1. Start a new sketch with draw, setup, and settings methods. Ask your teacher if you do not know how to do this.
+1. Start a new sketch with `draw`, `setup`, and `settings` methods. Ask your teacher if you do not know how to do this.
 
-2.  In the settings method, set your canvas of size 800x600 for your game
+2.  In the `settings` method, set your canvas of size 800x600 for your game
 size(width, height);
-In the draw method, set the background color of your sketch
+In the `draw` method, set the background color of your sketch
 background(red,green,blue);
-3. In the draw method, draw a frog on the bottom of the canvas. (It can be a ball for now)
+3. In the `draw` method, draw a frog on the bottom of the canvas. (It can be a ball for now)
 fill(red, green, blue);
 ellipse(x, y, width, height);
 4. Make member variables to keep track of your frog’s hop distance, x and y position
@@ -37,9 +37,9 @@ void keyPressed()
 }
 ```
 6. Write a method to keep our frog from going outside of the canvas
-7. Create a new Car class in Eclipse. Your Car class will include the car’s x position, y position, the size of the car, and the speed of the car.
-8. Create a constructor for your Car class that initializes each member variable with parameters.
-9. Copy this functionality into your Car class to display your car
+7. Create a new `Car` class in Eclipse. Your `Car` class will include the car’s x position, y position, the size of the car, and the speed of the car.
+8. Create a constructor for your `Car` class that initializes each member variable with parameters.
+9. Copy this functionality into your `Car` class to display your car
 ```
 void display()
   {
@@ -47,7 +47,7 @@ void display()
     rect(x , y,  size, 50);
   }
 ```
-10. Declare several Car member variables inside your class and initialize them in the setup method.
+10. Declare several `Car` member variables inside your `Frogger` class and initialize them in the setup method.
 11. Call the display() method from your draw method for each car. You should see your cars appear.
 12. Inside your Car class write a method for the car to move to the left with its speed.
 13. Inside your Car class write a method for the car to move to the left with its speed. In the same method, if the car goes off the canvas, have it return to the rightmost position of your canvas.  (hint: use Processing's width variable)
