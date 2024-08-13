@@ -41,14 +41,15 @@ void keyPressed()
 8. Create a constructor for your `Car` class that initializes each member variable with parameters.
 9. Copy this functionality into your `Car` class to display your car
 ```
-void display()
+void display(PApplet applet)
   {
     fill(0,255,0);
     rect(x , y,  size, 50);
   }
 ```
 10. Declare several `Car` member variables inside your `Frogger` class and initialize them in the setup method.
-11. Call the display() method from your draw method for each car. You should see your cars appear.
+11. From your `draw` method, call each Car's `display` method like `car.display(this)`. You should see your cars appear.
+    (note: passing the PApplet to the Car like this is an example of "inversion of control". That is, since a `Car` knows how to be a car, `Frogger` lets the `Car` be in charge of drawing the car).
 12. Inside your Car class write a method for the car to move to the left with its speed.
 13. Inside your Car class write a method for the car to move to the left with its speed. In the same method, if the car goes off the canvas, have it return to the rightmost position of your canvas.  (hint: use Processing's width variable)
 14.  Write another method for the car to move to the right with its speed. In the same method,  if the car goes off the canvas, have it return to the leftmost position of your canvas
