@@ -3,13 +3,15 @@ package _01_array_list_visualizer.data;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
 import javax.swing.JPanel;
 
 @SuppressWarnings("unchecked")
-public class ArrayList<T> {
+public class ArrayList<T> implements Iterable<T> {
 	public ArrayListDisplayPanel<T> displayPanel;
 	T[] list;
 	private T[] expectedList;
@@ -223,5 +225,10 @@ public class ArrayList<T> {
 			exList += t.toString() + ", ";
 		}
 		System.out.println(exList.substring(0, exList.length() - 2) + " => Size: " + expectedList.length);
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		return Arrays.asList(expectedList).iterator();
 	}
 }
